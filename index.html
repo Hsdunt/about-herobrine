@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Легенда о Херобрине</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      font-family: 'Press Start 2P', cursive;
+      background-image: url('https://wallpapercave.com/wp/wp7434033.png');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    header {
+      background: rgba(0,0,0,0.7);
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      border-bottom: 2px solid #fff;
+    }
+    section {
+      background: rgba(0,0,0,0.6);
+      margin: 20px;
+      padding: 20px;
+      border: 2px solid #ffffff;
+      border-radius: 10px;
+    }
+    h2 {
+      color: #ffcc00;
+    }
+    .gallery img {
+      width: 150px;
+      margin: 10px;
+      border: 2px solid white;
+    }
+    audio {
+      display: block;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    #timer {
+      font-size: 18px;
+      color: red;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Легенда о Херобрине
+  </header>
+
+  <section>
+    <h2>📜 Легенды и Истории</h2>
+    <p>Говорят, что Херобрин — это дух брата Нотча, заброшенный в код Майнкрафта. Он появляется без предупреждения, наблюдает за игроками из тени, разрушает миры и оставляет странные знаки...</p>
+    <p>Некоторые утверждают, что видели его в одиночной игре, другие — в мультиплеере. Но одно известно точно — он всегда рядом.</p>
+  </section>
+
+  <section>
+    <h2>🖼️ Галерея</h2>
+    <div class="gallery">
+      <img src="https://i.imgur.com/Z9aTz8P.png" alt="Herobrine Screenshot 1">
+      <img src="https://i.imgur.com/jctzYTq.png" alt="Herobrine Screenshot 2">
+      <img src="https://i.imgur.com/9Oey5FY.png" alt="Herobrine Screenshot 3">
+    </div>
+  </section>
+
+  <section>
+    <h2>⏱️ Таймер до следующего появления</h2>
+    <div id="timer">00:00:00</div>
+  </section>
+
+  <section>
+    <h2>🎵 Атмосфера</h2>
+    <p>Включи звук и почувствуй приближение чего-то... жуткого.</p>
+    <audio controls loop>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+      Ваш браузер не поддерживает аудиоэлемент.
+    </audio>
+  </section>
+
+  <script>
+    // Фейковый таймер появления Херобрина
+    function startHerobrineTimer() {
+      const timerEl = document.getElementById("timer");
+      let seconds = Math.floor(Math.random() * 300) + 60; // от 1 до 5 минут
+
+      function updateTimer() {
+        let min = Math.floor(seconds / 60);
+        let sec = seconds % 60;
+        timerEl.textContent = `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}:00`;
+        if (seconds > 0) {
+          seconds--;
+          setTimeout(updateTimer, 1000);
+        } else {
+          timerEl.textContent = "⚠️ ХЕРОБРИН ЯВИЛСЯ ⚠️";
+        }
+      }
+
+      updateTimer();
+    }
+
+    startHerobrineTimer();
+  </script>
+</body>
+</html>
