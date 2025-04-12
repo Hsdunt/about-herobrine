@@ -3,128 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Легенда о Херобрине</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Херобрин — Легенда Minecraft</title>
   <style>
     body {
       margin: 0;
-      background-color: #1a1a1a;
-      color: #ffffff;
-      font-family: 'Press Start 2P', cursive;
-      background-image: url('/mnt/data/Без названия.jpeg');
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
+      font-family: 'Courier New', monospace;
+      background-color: #111;
+      color: #eee;
     }
+
     header {
-      background: rgba(0,0,0,0.7);
+      background-color: #000;
       padding: 20px;
       text-align: center;
-      font-size: 24px;
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid #333;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: #1a1a1a;
+      padding: 10px;
+      border-bottom: 2px solid #333;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0ff;
+    }
+
     section {
-      background: rgba(0,0,0,0.6);
-      margin: 20px;
-      padding: 20px;
-      border: 2px solid #ffffff;
-      border-radius: 10px;
-    }
-    h2 {
-      color: #ffcc00;
-    }
-    .gallery img {
-      width: 150px;
-      margin: 10px;
-      border: 2px solid white;
-    }
-    audio {
-      display: block;
+      padding: 40px 20px;
+      max-width: 900px;
       margin: 0 auto;
-      margin-top: 20px;
     }
-    #timer {
-      font-size: 18px;
-      color: red;
+
+    .hero {
       text-align: center;
+    }
+
+    .hero img {
+      width: 200px;
+      height: auto;
+      border: 2px solid #0ff;
+      box-shadow: 0 0 20px #0ff;
       margin-top: 20px;
     }
-    .herobrine {
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      width: 100px;
-      height: auto;
-      opacity: 0;
-      animation: appear 3s ease-in-out forwards;
-      animation-delay: 5s;
-      z-index: 9999;
-    }
-    @keyframes appear {
-      0% { opacity: 0; transform: scale(0.5) rotate(0deg); }
-      50% { opacity: 1; transform: scale(1.1) rotate(5deg); }
-      100% { opacity: 1; transform: scale(1) rotate(0deg); }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    Легенда о Херобрине
-  </header>
 
-  <section>
-    <h2>📜 Легенды и Истории</h2>
-    <p>Говорят, что Херобрин — это дух брата Нотча, заброшенный в код Майнкрафта. Он появляется без предупреждения, наблюдает за игроками из тени, разрушает миры и оставляет странные знаки...</p>
-    <p>Некоторые утверждают, что видели его в одиночной игре, другие — в мультиплеере. Но одно известно точно — он всегда рядом.</p>
-  </section>
-
-  <section>
-    <h2>🖼️ Галерея</h2>
-    <div class="gallery">
-      <img src="https://i.imgur.com/Z9aTz8P.png" alt="Herobrine Screenshot 1">
-      <img src="https://i.imgur.com/jctzYTq.png" alt="Herobrine Screenshot 2">
-      <img src="https://i.imgur.com/9Oey5FY.png" alt="Herobrine Screenshot 3">
-    </div>
-  </section>
-
-  <section>
-    <h2>⏱️ Таймер до следующего появления</h2>
-    <div id="timer">00:00:00</div>
-  </section>
-
-  <section>
-    <h2>🎵 Атмосфера</h2>
-    <p>Включи звук и почувствуй приближение чего-то... жуткого.</p>
-    <audio controls loop>
-      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
-      Ваш браузер не поддерживает аудиоэлемент.
-    </audio>
-  </section>
-
-  <img src="https://i.imgur.com/y8lT1Sg.png" alt="Herobrine appears" class="herobrine">
-
-  <script>
-    // Фейковый таймер появления Херобрина
-    function startHerobrineTimer() {
-      const timerEl = document.getElementById("timer");
-      let seconds = Math.floor(Math.random() * 300) + 60; // от 1 до 5 минут
-
-      function updateTimer() {
-        let min = Math.floor(seconds / 60);
-        let sec = seconds % 60;
-        timerEl.textContent = `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}:00`;
-        if (seconds > 0) {
-          seconds--;
-          setTimeout(updateTimer, 1000);
-        } else {
-          timerEl.textContent = "⚠️ ХЕРОБРИН ЯВИЛСЯ ⚠️";
-        }
-      }
-
-      updateTimer();
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      border-top: 2px solid #333;
+      color: #888;
     }
 
-    startHerobrineTimer();
-  </script>
-</body>
-</html>
+    .history, .theories, .mods, .screenshots, .videos {
+      background-color: #222;
+      border-radius: 8px;
+      margin: 20px 0;
+      padding: 20px;
+    }
+
+    .history h2, .theories h2, .mods h2, .screenshots h2, .videos h2 {
+      font-size: 1.8em;
+      color: #0ff;
+    }
+
+    .theories ul, .mods ul, .screenshots ul, .videos ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .theories li, .mods li, .screenshots li, .videos li {
+      padding: 10px;
+      border-bottom: 1px solid #333;
+    }
+
+    .theories li:hover, .mods li:hover, .
