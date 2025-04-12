@@ -8,21 +8,21 @@
     body {
       margin: 0;
       font-family: 'Courier New', monospace;
-      background-color: #111;
-      color: #eee;
+      background-color: #f5f5f5; /* Светлый фон */
+      color: #111; /* Темный текст */
     }
 
     header {
-      background-color: #000;
+      background-color: #333; /* Темный фон в хедере */
       padding: 20px;
       text-align: center;
-      border-bottom: 2px solid #333;
+      border-bottom: 2px solid #444;
     }
 
     header h1 {
       margin: 0;
       font-size: 2.5em;
-      color: #0ff;
+      color: #fff; /* Белый текст */
       text-shadow: 0 0 10px #0ff;
     }
 
@@ -30,20 +30,20 @@
       display: flex;
       justify-content: center;
       gap: 20px;
-      background-color: #1a1a1a;
+      background-color: #222; /* Темный фон для навигации */
       padding: 10px;
-      border-bottom: 2px solid #333;
+      border-bottom: 2px solid #444;
     }
 
     nav a {
-      color: #fff;
+      color: #fff; /* Белые ссылки */
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #0ff;
+      color: #0ff; /* Голубой при наведении */
     }
 
     section {
@@ -67,21 +67,22 @@
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #000;
-      border-top: 2px solid #333;
-      color: #888;
+      background-color: #333;
+      border-top: 2px solid #444;
+      color: #ccc; /* Светлый текст в футере */
     }
 
     .history, .theories, .mods, .screenshots, .videos {
-      background-color: #222;
+      background-color: #fff; /* Белый фон для разделов */
       border-radius: 8px;
       margin: 20px 0;
       padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     .history h2, .theories h2, .mods h2, .screenshots h2, .videos h2 {
       font-size: 1.8em;
-      color: #0ff;
+      color: #0ff; /* Голубой заголовок */
     }
 
     .theories ul, .mods ul, .screenshots ul, .videos ul {
@@ -91,7 +92,78 @@
 
     .theories li, .mods li, .screenshots li, .videos li {
       padding: 10px;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid #ccc;
     }
 
-    .theories li:hover, .mods li:hover, .
+    .theories li:hover, .mods li:hover, .screenshots li:hover, .videos li:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Херобрин — Легенда Minecraft</h1>
+  </header>
+
+  <nav>
+    <a href="#">Главная</a>
+    <a href="#history">История</a>
+    <a href="#theories">Теории</a>
+    <a href="#screenshots">Скриншоты</a>
+    <a href="#videos">Видео</a>
+    <a href="#mods">Моды</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Кто такой Херобрин?</h2>
+    <p>Херобрин — мифический персонаж Minecraft, о котором ходят легенды. Его описывают как игрока с белыми глазами, появляющегося внезапно в одиночной игре...</p>
+    <img src="https://i.imgur.com/xxVKU2T.png" alt="Herobrine">
+  </section>
+
+  <section id="history" class="history">
+    <h2>История Херобрина</h2>
+    <p>Херобрин появился в 2010 году, когда на форуме Minecraft была опубликована первая история о нем. С тех пор начали появляться слухи и фанатские теории, где он был изображён как мистическое существо, скрывающееся в игре...</p>
+    <p>Некоторые утверждают, что Херобрин — это брат Нотча, создателя Minecraft, который якобы умер, но его дух продолжает обитать в игре.</p>
+  </section>
+
+  <section id="theories" class="theories">
+    <h2>Теории о Херобрино</h2>
+    <ul>
+      <li>Херобрин — это дух Нотча, его умерший брат, который был запрограммирован в код игры.</li>
+      <li>Херобрин — баг или неполадка в Minecraft, которая появляется по случайности.</li>
+      <li>Херобрин является частью скрытых разработок Mojang, которые они оставили в игре в виде пасхалок.</li>
+    </ul>
+  </section>
+
+  <section id="screenshots" class="screenshots">
+    <h2>Скриншоты Херобрина</h2>
+    <ul>
+      <li><img src="https://example.com/screenshot1.jpg" alt="Screenshot 1"></li>
+      <li><img src="https://example.com/screenshot2.jpg" alt="Screenshot 2"></li>
+      <li><img src="https://example.com/screenshot3.jpg" alt="Screenshot 3"></li>
+    </ul>
+  </section>
+
+  <section id="videos" class="videos">
+    <h2>Видео о Херобрине</h2>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=example" target="_blank">Засняли Херобрина в Minecraft!</a></li>
+      <li><a href="https://www.youtube.com/watch?v=example" target="_blank">Теории о Херобрине — что правда?</a></li>
+    </ul>
+  </section>
+
+  <section id="mods" class="mods">
+    <h2>Моды и Гайды</h2>
+    <p>Скачайте моды, чтобы добавить Херобрина в свою игру Minecraft! Вот несколько популярных:</p>
+    <ul>
+      <li><a href="https://example.com/herobrine-mod" target="_blank">Herobrine Mod</a></li>
+      <li><a href="https://example.com/herobrine-map" target="_blank">Карта для Minecraft с Херобрином</a></li>
+    </ul>
+    <p>Гайд по призыву Херобрина: как создать тотем и вызвать его в одиночной игре.</p>
+  </section>
+
+  <footer>
+    © 2025 Сайт о Херобрине | Сделано фанатами Minecraft
+  </footer>
+</body>
+</html>
