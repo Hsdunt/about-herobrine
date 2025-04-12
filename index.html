@@ -7,163 +7,112 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Courier New', monospace;
-      background-color: #f5f5f5; /* Светлый фон */
-      color: #111; /* Темный текст */
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #000;
     }
 
     header {
-      background-color: #333; /* Темный фон в хедере */
-      padding: 20px;
+      background-color: #202020;
+      color: #ffffff;
+      padding: 30px;
       text-align: center;
-      border-bottom: 2px solid #444;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      color: #fff; /* Белый текст */
-      text-shadow: 0 0 10px #0ff;
     }
 
     nav {
+      background-color: #333;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      background-color: #222; /* Темный фон для навигации */
-      padding: 10px;
-      border-bottom: 2px solid #444;
+      padding: 10px 0;
     }
 
     nav a {
-      color: #fff; /* Белые ссылки */
+      color: #fff;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
       transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #0ff; /* Голубой при наведении */
+      color: #00ffff;
     }
 
     section {
       padding: 40px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .hero {
-      text-align: center;
-    }
-
-    .hero img {
-      width: 200px;
-      height: auto;
-      border: 2px solid #0ff;
-      box-shadow: 0 0 20px #0ff;
-      margin-top: 20px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 30px;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #333;
-      border-top: 2px solid #444;
-      color: #ccc; /* Светлый текст в футере */
+      background-color: #202020;
+      color: #ccc;
+      margin-top: 40px;
     }
 
-    .history, .theories, .mods, .screenshots, .videos {
-      background-color: #fff; /* Белый фон для разделов */
-      border-radius: 8px;
-      margin: 20px 0;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
     }
 
-    .history h2, .theories h2, .mods h2, .screenshots h2, .videos h2 {
-      font-size: 1.8em;
-      color: #0ff; /* Голубой заголовок */
-    }
-
-    .theories ul, .mods ul, .screenshots ul, .videos ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .theories li, .mods li, .screenshots li, .videos li {
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .theories li:hover, .mods li:hover, .screenshots li:hover, .videos li:hover {
-      background-color: #f0f0f0;
+    h2 {
+      color: #008080;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Херобрин — Легенда Minecraft</h1>
+    <p>Правда или миф? Исследуем вместе</p>
   </header>
 
   <nav>
-    <a href="#">Главная</a>
+    <a href="#about">О Херобрине</a>
     <a href="#history">История</a>
     <a href="#theories">Теории</a>
-    <a href="#screenshots">Скриншоты</a>
-    <a href="#videos">Видео</a>
-    <a href="#mods">Моды</a>
+    <a href="#media">Скриншоты/Видео</a>
   </nav>
 
-  <section class="hero">
+  <section id="about">
     <h2>Кто такой Херобрин?</h2>
-    <p>Херобрин — мифический персонаж Minecraft, о котором ходят легенды. Его описывают как игрока с белыми глазами, появляющегося внезапно в одиночной игре...</p>
+    <p>Херобрин — легендарный персонаж Minecraft, описываемый как призрачный игрок с пустыми белыми глазами. По слухам, он появляется в одиночной игре, наблюдает за игроком и исчезает.</p>
     <img src="https://i.imgur.com/xxVKU2T.png" alt="Herobrine">
   </section>
 
-  <section id="history" class="history">
-    <h2>История Херобрина</h2>
-    <p>Херобрин появился в 2010 году, когда на форуме Minecraft была опубликована первая история о нем. С тех пор начали появляться слухи и фанатские теории, где он был изображён как мистическое существо, скрывающееся в игре...</p>
-    <p>Некоторые утверждают, что Херобрин — это брат Нотча, создателя Minecraft, который якобы умер, но его дух продолжает обитать в игре.</p>
+  <section id="history">
+    <h2>История происхождения</h2>
+    <p>Впервые о Херобрине заговорили в 2010 году после поста на Reddit. Один игрок утверждал, что увидел странного NPC с белыми глазами. С тех пор фанаты Minecraft начали искать его, публиковать скриншоты и создавать моды.</p>
   </section>
 
-  <section id="theories" class="theories">
-    <h2>Теории о Херобрино</h2>
+  <section id="theories">
+    <h2>Популярные теории</h2>
     <ul>
-      <li>Херобрин — это дух Нотча, его умерший брат, который был запрограммирован в код игры.</li>
-      <li>Херобрин — баг или неполадка в Minecraft, которая появляется по случайности.</li>
-      <li>Херобрин является частью скрытых разработок Mojang, которые они оставили в игре в виде пасхалок.</li>
+      <li>👻 Херобрин — дух умершего брата Нотча.</li>
+      <li>💻 Это баг, случайно добавленный в ранних версиях Minecraft.</li>
+      <li>🧩 Пасхалка, скрытая Mojang и отрицаемая официально.</li>
     </ul>
   </section>
 
-  <section id="screenshots" class="screenshots">
-    <h2>Скриншоты Херобрина</h2>
+  <section id="media">
+    <h2>Скриншоты и видео</h2>
+    <p>Вот некоторые материалы, где "замечен" Херобрин:</p>
     <ul>
-      <li><img src="https://example.com/screenshot1.jpg" alt="Screenshot 1"></li>
-      <li><img src="https://example.com/screenshot2.jpg" alt="Screenshot 2"></li>
-      <li><img src="https://example.com/screenshot3.jpg" alt="Screenshot 3"></li>
+      <li><a href="https://www.youtube.com/watch?v=UhDWhL1eYZc" target="_blank">🎥 Херобрин в лесу</a></li>
+      <li><a href="https://i.imgur.com/xxVKU2T.png" target="_blank">🖼 Скриншот с белыми глазами</a></li>
     </ul>
-  </section>
-
-  <section id="videos" class="videos">
-    <h2>Видео о Херобрине</h2>
-    <ul>
-      <li><a href="https://www.youtube.com/watch?v=example" target="_blank">Засняли Херобрина в Minecraft!</a></li>
-      <li><a href="https://www.youtube.com/watch?v=example" target="_blank">Теории о Херобрине — что правда?</a></li>
-    </ul>
-  </section>
-
-  <section id="mods" class="mods">
-    <h2>Моды и Гайды</h2>
-    <p>Скачайте моды, чтобы добавить Херобрина в свою игру Minecraft! Вот несколько популярных:</p>
-    <ul>
-      <li><a href="https://example.com/herobrine-mod" target="_blank">Herobrine Mod</a></li>
-      <li><a href="https://example.com/herobrine-map" target="_blank">Карта для Minecraft с Херобрином</a></li>
-    </ul>
-    <p>Гайд по призыву Херобрина: как создать тотем и вызвать его в одиночной игре.</p>
   </section>
 
   <footer>
-    © 2025 Сайт о Херобрине | Сделано фанатами Minecraft
+    © 2025 Херобрин-Фан-сайт | Все права защищены
   </footer>
+
 </body>
 </html>
