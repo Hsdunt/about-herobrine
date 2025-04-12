@@ -11,9 +11,10 @@
       background-color: #1a1a1a;
       color: #ffffff;
       font-family: 'Press Start 2P', cursive;
-      background-image: url('https://wallpapercave.com/wp/wp7434033.png');
+      background-image: url('/mnt/data/Без названия.jpeg');
       background-size: cover;
       background-attachment: fixed;
+      background-position: center;
     }
     header {
       background: rgba(0,0,0,0.7);
@@ -47,6 +48,22 @@
       color: red;
       text-align: center;
       margin-top: 20px;
+    }
+    .herobrine {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: 100px;
+      height: auto;
+      opacity: 0;
+      animation: appear 3s ease-in-out forwards;
+      animation-delay: 5s;
+      z-index: 9999;
+    }
+    @keyframes appear {
+      0% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+      50% { opacity: 1; transform: scale(1.1) rotate(5deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); }
     }
   </style>
 </head>
@@ -83,6 +100,8 @@
       Ваш браузер не поддерживает аудиоэлемент.
     </audio>
   </section>
+
+  <img src="https://i.imgur.com/y8lT1Sg.png" alt="Herobrine appears" class="herobrine">
 
   <script>
     // Фейковый таймер появления Херобрина
